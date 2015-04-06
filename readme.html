@@ -1,17 +1,8 @@
-<h1>Bookings widget loader</h1>
+<h1>Widget loader</h1>
 
-<p>Super nice jQuery plugin to load the bookings widget.</p>
-
-<h2>Notice for 2.0</h2>
-
-<p>We don&rsquo;t need jQuery library included. Only if you want to use the previous 2.0 versions of the library then it&rsquo;s required to add it.</p>
+<p>Super nice plugin to load elements widget.</p>
 
 <h2>Installation</h2>
-
-<p>Include the jQuery library above your &lt;/body&gt; tag for previous 2.0 versions</p>
-
-<pre><code>&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"&gt;&lt;/script&gt;
-</code></pre>
 
 <p>Add the script below. This will load the iframe in the page and also by the button.</p>
 
@@ -27,7 +18,7 @@ var _lopts = _lopts || [];
 
 (function() {
     var loader = document.createElement('script'); loader.type = 'text/javascript'; loader.async = true;
-    loader.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'd1u2f2r665j4oh.cloudfront.net/loader-v2.0.js';
+    loader.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'localhost/src/loader-v1.0.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(loader, s);
 })();
 &lt;/script&gt;   
@@ -38,14 +29,6 @@ var _lopts = _lopts || [];
 <h3>_lopts</h3>
 
 <p>You have to specify this &ldquo;_lopts&rdquo; array that holds the options to configure that plugin. We can also set these as defaults in the plugin so this won&rsquo;t be required.</p>
-
-<h3>.specials_domain</h3>
-
-<p>You can specify the domain of the specials website to view and show them on the modal when setting the following settings on an url:</p>
-
-<p><code>&lt;a href="http://yahoo.com" class='tb-modal-special' data-special="324d84" data-restaurant="1" data-restaurant-slug="chocksy-s-restaurant"&gt;Voucher loader&lt;/a&gt;</code></p>
-
-<p><strong>Note</strong>: the specials is only openable from links or buttons and not showable via iframe. The <code>.tb-modal-special</code> class is required to assign the click action on the element.</p>
 
 <h3>.widget_domain</h3>
 

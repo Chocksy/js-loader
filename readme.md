@@ -1,16 +1,8 @@
-# Bookings widget loader
+# Widget loader
 
-Super nice jQuery plugin to load the bookings widget.
-
-## Notice for 2.0
-
-We don't need jQuery library included. Only if you want to use the previous 2.0 versions of the library then it's required to add it.
+Super nice plugin to load elements widget.
 
 ## Installation
-
-Include the jQuery library above your &lt;/body&gt; tag for previous 2.0 versions 
-
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 Add the script below. This will load the iframe in the page and also by the button.
 	
@@ -26,7 +18,7 @@ Add the script below. This will load the iframe in the page and also by the butt
 
     (function() {
         var loader = document.createElement('script'); loader.type = 'text/javascript'; loader.async = true;
-        loader.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'd1u2f2r665j4oh.cloudfront.net/loader-v2.0.js';
+        loader.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'localhost/src/loader-v1.0.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(loader, s);
     })();
 	</script>   
@@ -37,14 +29,6 @@ Add the script below. This will load the iframe in the page and also by the butt
 ### _lopts
 
 You have to specify this "_lopts" array that holds the options to configure that plugin. We can also set these as defaults in the plugin so this won't be required.
-
-### .specials_domain
-
-You can specify the domain of the specials website to view and show them on the modal when setting the following settings on an url:
-
-```<a href="http://yahoo.com" class='tb-modal-special' data-special="324d84" data-restaurant="1" data-restaurant-slug="chocksy-s-restaurant">Voucher loader</a>```
-
-__Note__: the specials is only openable from links or buttons and not showable via iframe. The ```.tb-modal-special``` class is required to assign the click action on the element.
 
 ### .widget_domain
 
