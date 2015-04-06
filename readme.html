@@ -1,0 +1,107 @@
+<h1>Bookings widget loader</h1>
+
+<p>Super nice jQuery plugin to load the bookings widget.</p>
+
+<h2>Notice for 2.0</h2>
+
+<p>We don&rsquo;t need jQuery library included. Only if you want to use the previous 2.0 versions of the library then it&rsquo;s required to add it.</p>
+
+<h2>Installation</h2>
+
+<p>Include the jQuery library above your &lt;/body&gt; tag for previous 2.0 versions</p>
+
+<pre><code>&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Add the script below. This will load the iframe in the page and also by the button.</p>
+
+<pre><code>&lt;div id="side_widget"&gt;&lt;/div&gt;
+
+&lt;script type="text/javascript"&gt;
+var _lopts = _lopts || [];
+    _lopts.widget_url = "d321d6f7ccf98b51540ec9d933f20898af3bd71e";
+    _lopts.modal_width = 417;
+    _lopts.modal_height = 190;
+    _lopts.widget_container = "#side_widget";
+    _lopts.iframe_widget = true;
+
+(function() {
+    var loader = document.createElement('script'); loader.type = 'text/javascript'; loader.async = true;
+    loader.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'd1u2f2r665j4oh.cloudfront.net/loader-v2.0.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(loader, s);
+})();
+&lt;/script&gt;   
+</code></pre>
+
+<h2>Configuration</h2>
+
+<h3>_lopts</h3>
+
+<p>You have to specify this &ldquo;_lopts&rdquo; array that holds the options to configure that plugin. We can also set these as defaults in the plugin so this won&rsquo;t be required.</p>
+
+<h3>.specials_domain</h3>
+
+<p>You can specify the domain of the specials website to view and show them on the modal when setting the following settings on an url:</p>
+
+<p><code>&lt;a href="http://yahoo.com" class='tb-modal-special' data-special="324d84" data-restaurant="1" data-restaurant-slug="chocksy-s-restaurant"&gt;Voucher loader&lt;/a&gt;</code></p>
+
+<p><strong>Note</strong>: the specials is only openable from links or buttons and not showable via iframe. The <code>.tb-modal-special</code> class is required to assign the click action on the element.</p>
+
+<h3>.widget_domain</h3>
+
+<p>The widget domain is the location of the widget.</p>
+
+<pre><code>_lopts.widget_domain = "//localhost/"
+</code></pre>
+
+<h3>.widget_url</h3>
+
+<p>The widget url are the parameters that come after the domain if you have any for example ?id=333&amp;do=match</p>
+
+<pre><code>_lopts.widget_url = "?id=2"
+</code></pre>
+
+<h3>.modal_width</h3>
+
+<p>You can specify the popup modal width that opens when you click the button on the side.</p>
+
+<pre><code>_lopts.modal_width = 400 //default is auto (must be number)
+</code></pre>
+
+<h3>.modal_height</h3>
+
+<p>You can specify the popup modal height that opens when you click the button on the side.</p>
+
+<pre><code>_lopts.modal_height = 170 //default is auto (must be number)
+</code></pre>
+
+<h3>.iframe_widget</h3>
+
+<p>You can specify if you want the plugin to load in the page an iframe with the widget on load.</p>
+
+<pre><code>_lopts.iframe_widget = false
+</code></pre>
+
+<h3>.side_btn</h3>
+
+<p>You can specify if you want to turn off the sidebar button that loads the widget</p>
+
+<pre><code>_lopts.side_btn = true
+</code></pre>
+
+<h3>.widget_container</h3>
+
+<p>Give here the element you want the iframe widget to be inserted in if you don&rsquo;t specify it then it will be added to the body</p>
+
+<pre><code>_lopts.widget_container = 'body' 
+
+//or 
+
+_lopts.widget_container = '#my_widget'
+
+//or
+
+_lopts.widget_container = '.widget'
+</code></pre>
+
+<h3>Made by: <a href="http://github.com/Chocksy">Chocksy</a></h3>

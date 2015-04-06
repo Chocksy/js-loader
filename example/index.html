@@ -1,0 +1,64 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Reservations Widget Loader</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<meta name="description" content="Reservations loading plugin.">
+	<meta name="author" content="Chocksy,EpicCoders">
+
+	<style type="text/css">
+		body{ height: 1000px; background: white;}	
+    #side_widget{ width: 690px; height: 600px; margin: 0 auto;}
+	</style>
+
+</head>
+<body>
+  <h1>Hello thor!</h1>	
+	<h2>This is loaded in the page and on the side you have the one loaded by the button</h2>
+  <div id="side_widget"></div>
+   
+  <a href="http://google.com" class='tb-modal' data-widget="c1eea070ec4dbb53">apasal</a>
+  <a href="http://yahoo.com" class='tb-modal-special' data-special="324d84" data-restaurant="1" data-restaurant-slug="chocksy-s-restaurant">Voucher loader</a>
+	<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+
+<script type='text/javascript'>
+(function (d, t) {
+  var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+  bh.type = 'text/javascript';
+  bh.src = '//www.bugherd.com/sidebarv2.js?apikey=ueatdoxgsfpfcgeilf6wha';
+  s.parentNode.insertBefore(bh, s);
+  })(document, 'script');
+</script>
+    
+	<script type="text/javascript">
+    var _lopts = _lopts || [];
+        _lopts.widget_domain    = "//table-bookings.dev/widgets/"
+        _lopts.widget_url       = "c1eea070ec4dbb53";
+        _lopts.specials_domain  = '//deals-tablebookings.dev/'
+        // _lopts.theme            = "light";
+        _lopts.modal_width      = "60%";
+        _lopts.modal_height     = 500;
+        // _lopts.widget_container = "#side_widget";
+        _lopts.custom_widget    = true;
+        _lopts.side_btn         = true;
+        // _lopts.iframe_widget    = true;
+
+    var local_script = "tablebookings-widget.site/build/loader-min.js";
+    var s3_script    = "d1u2f2r665j4oh.cloudfront.net/loader-v2.1.js";
+
+    (function() {
+        var loader = document.createElement('script'); loader.type = 'text/javascript'; loader.async = true;
+        loader.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + local_script;
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(loader, s);
+    })();
+  </script>       
+
+</body>
+</html>
+
